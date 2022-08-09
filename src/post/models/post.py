@@ -21,7 +21,6 @@ class Post(GeneralModel):
         on_delete=models.CASCADE,
         verbose_name=gettext('Author'),
         related_name='posts',
-        null=True
     )
     caption = models.TextField(
         verbose_name=gettext('Caption')
@@ -30,6 +29,8 @@ class Post(GeneralModel):
         verbose_name=gettext('Media'),
         upload_to=get_file_path,
         max_length=128,
+        null=True,
+        blank=True
     )
     tag = models.ManyToManyField(
         'tag.tag',

@@ -16,7 +16,7 @@ class Comment(GeneralModel):
     post = models.ForeignKey(
         'post.Post',
         on_delete=models.CASCADE,
-        related_name='Comments'
+        related_name='Post'
     )
     text = models.TextField(
         verbose_name=gettext('Text')
