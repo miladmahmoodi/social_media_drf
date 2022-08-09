@@ -1,5 +1,5 @@
 from django.contrib import admin
 
 
-class PostAdmin(admin.ModelAdmin):
+class ProfileImageAdmin(admin.ModelAdmin):
     pass
