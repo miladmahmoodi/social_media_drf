@@ -22,7 +22,7 @@ class Comment(GeneralModel):
         verbose_name=gettext('Text')
     )
     parent = models.ForeignKey(
-        'comment.Comment',
+        'post.POST',
         verbose_name=gettext('Parent'),
         on_delete=models.CASCADE,
         related_name='replies',

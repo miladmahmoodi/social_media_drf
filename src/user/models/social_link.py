@@ -21,6 +21,7 @@ class SocialLink(GeneralModel):
     )
     url = models.CharField(
         verbose_name=gettext('Social Media Url'),
+        max_length=128
     )
 
 
