@@ -35,7 +35,6 @@ class Post(GeneralModel):
     tag = models.ManyToManyField(
         'tag.tag',
         verbose_name=gettext('Tag'),
-        null=True,
         blank=True
     )
     like = models.ManyToManyField(

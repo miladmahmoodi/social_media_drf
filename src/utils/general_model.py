@@ -3,10 +3,12 @@ from django.utils.translation import gettext
 
 
 class GeneralModel(models.Model):
+    """
+    log of every query received from a client,
+    """
     created_at = models.DateTimeField(
         verbose_name=gettext('Created Time'),
         auto_now_add=True
-    #     برای زمانی که رکوردی به دیتابیس اضافه میشه بیاد تاریخ همون لحظه رو بزنه برامون
     )
     updated_at = models.DateTimeField(
         verbose_name=gettext('Updated Time'),
@@ -15,6 +17,6 @@ class GeneralModel(models.Model):
 
     class Meta:
         """
-        جلوگیری از مایگریت شدن
+        ignore migration with use abstract
         """
         abstract = True

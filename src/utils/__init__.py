@@ -1,2 +1,2 @@
-from general_model import GeneralModel
-from base_errors import BaseErrors
+from .general_model import GeneralModel
+from .base_errors import BaseErrors
